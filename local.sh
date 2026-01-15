@@ -60,29 +60,10 @@ trap handle_exit EXIT
 send_telegram_message "*Build Started for Miatoll*  
 If something catches fire, I'll let you know."
 
-
-echo -e ">>> Cloning Device Trees"
-echo -e ">>> Cloning Device, Vendor, Kernel and Hardware Trees"
-echo -e ">>> Please wait, this may take a while..."
-
-echo -e ">>> Cloning Device Tree: xiaomi/miatoll"
-echo -e ">>> Done"
-
-echo -e ">>> Cloning Vendor Tree: xiaomi/vendor"
-echo -e ">>> Done"
-
-echo -e ">>> Cloning Kernel Tree: xiaomi/sm6250"
-echo -e ">>> Done"
-
-echo -e ">>> Cloning Hardware Tree: xiaomi/hardware_xiaomi"
-echo -e ">>> Done"
-
-echo -e ">>> Cloning Additional Hardware Trees"
-echo -e ">>> Done"
-
-echo -e ">>> Cloning MIUI Camera Vendor Tree: xiaomi/miuicamera"
-echo -e ">>> Done"
-
+BUILD_START_TIME=$(date +%s)
+export BUILD_USERNAME=AbdoElbanaa
+export BUILD_HOSTNAME=crave
+export DONT_DEXPREOPT_PREBUILTS=true
 
 echo -e ">>> All Device, Vendor, Kernel and Hardware Trees Cloned Successfully"
 echo -e ">>> Proceeding to sync remaining sources..."
