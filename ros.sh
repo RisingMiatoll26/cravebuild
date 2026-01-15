@@ -69,6 +69,8 @@ echo "Cleaning up old leftover repos… they were useless anyway."
 rm -rf .repo/local_manifests/ \
  device/xiaomi/miatoll \
  vendor/xiaomi/miatoll \
+ device/xiaomi/miatoll-kernel \
+ kernel/xiaomi/sm6250 \
  hardware/xiaomi \
  vendor/xiaomi/miuicamera \
  hardware/sony/timekeep \
@@ -97,7 +99,7 @@ git clone https://github.com/RisingMiatoll26/vendor_xiaomi_miatoll.git -b 16 ven
 echo -e ">>> Done"
 
 echo -e ">>> Cloning Kernel Tree: xiaomi/sm6250"
-git clone https://github.com/RisingMiatoll26/kernel_xiaomi_sm6250.git -b 16 device/xiaomi/miatoll-kernel
+git clone https://github.com/RisingMiatoll26/kernel_xiaomi_sm6250.git -b 16 kernel/xiaomi/sm6250
 echo -e ">>> Done"
 
 echo -e ">>> Cloning Hardware Tree: xiaomi/hardware_xiaomi"
