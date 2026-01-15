@@ -78,8 +78,22 @@ riseup miatoll userdebug
 echo "Running 'm installclean' for a safe build..."
 m installclean
 
+
+TOTAL_RAM_GB=$(free -g | awk '/Mem:/ {print $2}')
+
+if [ "$TOTAL_RAM_GB" -le 16 ]; then
+  JOBS=3
+elif [ "$TOTAL_RAM_GB" -le 24 ]; then
+  JOBS=4
+else
+  JOBS=6
+fi
+
+echo "Using $JOBS parallel jobs for build"
+
+
 echo "Starting the main build..."
-mka bacon -j$(nproc --all)
+mka bacon -j$JOBS
 
 send_telegram_message "*Build Finished*  
 Uploading… unless something dumb happens."
