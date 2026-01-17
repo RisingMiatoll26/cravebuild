@@ -91,7 +91,7 @@ echo -e ">>> Cloning Device, Vendor, Kernel and Hardware Trees"
 echo -e ">>> Please wait, this may take a while..."
 
 echo -e ">>> Cloning Device Tree: xiaomi/miatoll"
-git clone https://github.com/RisingMiatoll26/device_xiaomi_miatoll.git -b risingos device/xiaomi/miatoll
+git clone https://github.com/RisingMiatoll26/device_xiaomi_miatoll.git -b qpr2 device/xiaomi/miatoll
 echo -e ">>> Done"
 
 echo -e ">>> Cloning Vendor Tree: xiaomi/vendor"
